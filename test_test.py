@@ -2,10 +2,6 @@ import unittest2 as unittest
 from ipynb.fs.full.index import build_trace, layout, trace_values
 
 class TestPlotly(unittest.TestCase):
-    def test_build_trace_returns_dict_with_keys_of_x_and_y(self):
-        figurekeys = build_trace([]).keys()
-        self.assertEqual(list(figurekeys)[0], 'x')
-        self.assertEqual(list(figurekeys)[1], 'y')
 
     def test_build_trace_sets_x_values_as_value_and_y_values_as_value(self):
         data = [{'x': 1, 'y': 1}, {'x': 3, 'y': 2}, {'x': 2, 'y': 5}]
